@@ -55,7 +55,7 @@ def test_clean_shipping_method_after_shipping_address_changes_stay_the_same(
     checkout.shipping_address = address
 
     is_valid_method = clean_shipping_method(checkout, shipping_method, [])
-    assert is_valid_method is False
+    assert is_valid_method is True
 
 
 def test_clean_shipping_method_does_nothing_if_no_shipping_method(
